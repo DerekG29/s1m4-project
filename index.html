@@ -1,0 +1,129 @@
+<!-- Intro to HTML & CSS I
+
+  Module Project Overview
+
+    You will build a website to display the bio of your favorite programmer, artist, etc.
+
+    In order to do this, you will create an `index.html` file and scaffold the document
+    with the elements shared by all HTML documents:
+
+    - doctype declaration
+    - html element
+    - head, containing a title and an optional style tag
+    - body, containing the markup that renders to the screen
+
+  Requirements
+
+    Review this article: https://www.w3schools.com/html/html5_semantic_elements.asp
+
+    Create an `index.html` file for your site, or use this same file.
+
+    For your site, you will make use of at least the following semantic elements:
+
+    - header (to contain the main heading of the site, and the nav)
+    - nav (to contain some links to navigate to the different sections of this document)
+    - section (each holding at least a heading and a paragraph)
+    - aside (containing an img and a caption)
+    - footer (containing a contact form)
+    - form (containing at least two inputs with their labels)
+
+    See an example of a finished site: https://bloominstituteoftechnology.github.io/img/anita-borg-bio-website.png
+
+    The example above is quite simple, but you can make your site as fancy as you'd like. -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Frank Herbert Bio</title>
+    <style>
+      nav {
+        padding: 10px;
+      }
+      header {
+        margin: 10px;
+        border-bottom: 3px solid black;
+      }
+      .sections {
+        margin: 10px;
+      }
+      footer {
+        margin: 10px;
+        padding-bottom:20px;
+      }
+      .navLink {
+        margin: 5px;
+      }
+      aside {
+        max-width: 50%;
+        float: right;
+      }
+      #overviewSection {
+        scroll-behavior: smooth;
+      }
+      .imgs {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 60%;
+      }
+      .paragraph {
+        text-indent: 25px;
+        font-size: larger;
+      }
+      #awards {
+        border-bottom: 3px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="mainHeading">Frank Herbert</h1>
+      <h2 id="birthDeath" class="heading2">October 8, 1920 - February 11, 1986</h2>
+    </header>
+    <nav>
+      <a class="navLink" href="#overviewSection">Overview</a>
+      <a class="navLink" href="#dune">Dune</a>
+      <a class="navLink" href="#awards">Awards & Recogniton</a>
+      <a class="navLink" href="#contact">Contact</a>
+    </nav>
+    <section id="overviewSection" class="sections">
+      <h2 id="overviewHeading" class="heading2">Overview</h2>
+      <aside>
+        <img id="frankimg" class="imgs" src="https://www.historylink.org/Content/Media/Photos/Large/Frank-Herbert-September-27-1982.jpg">
+        <p id="frankDesc" class ="imgs">Frank Herbert - September 27, 1982</p>
+      </aside>
+      <p id="overviewText" class="paragraph">
+        Frank Herbert was an American science fiction author who is best known for writing the 1965 novel, Dune. He was born on October 8, 1920 in Tacoma, Washington to Frank Herbert Sr. and Eileen Herbert. He had an interest in books and photography from a young age and held a variety of occupations throughout his career such as writing short stories, working as a newspaper journalist, photography, book reviews, ecological consultation, and giving lectures.Frank Herbert passed away in Madison, Wisconson on February 11, 1986 at the age of 65.
+      </p>
+    </section>
+    <section id="dune" class="sections">
+      <h2>Dune</h2>
+      <p id="duneText" class="paragraph">
+        The Dune series by Frank Herbert is a groundbreaking and influential science fiction epic that explores a complex and vividly imagined universe. The first novel, "Dune," introduces readers to the desert planet of Arrakis, the only source of the valuable spice melange. The narrative follows the noble House Atreides and its young heir, Paul Atreides, as they navigate political intrigue, ecological challenges, and the mystical elements tied to the spice. Herbert's intricate world-building, political intricacies, and philosophical themes, including the concept of the Bene Gesserit sisterhood and the messianic figure Muad'Dib, contribute to the series' enduring legacy. Spanning multiple generations and delving into themes of power, religion, and environmentalism, the Dune series stands as a monumental achievement in the realm of science fiction literature.
+      </p>
+      <h3 id="bookList" class="heading3">Main books in the Dune series written by Frank Herbert:</h3>
+      <ul>
+        <li>Dune (1965)</li>
+        <li>Dune: Messiah (1969)</li>
+        <li>Childeren of Dune (1976)</li>
+        <li>God Emperor of Dune (1981)</li>
+        <li>Heretics of Dune (1984)</li>
+        <li>Chapterhouse: Dune (1985)</li>
+      </ul>
+    </section>
+    <section id="awards" class="sections">
+      <h2>Awards & Recognition</h2>
+      <p id="awardsText" class="paragraph">In 1966 Dune won both the Nebula Award for best novel as well as the Hugo Award and has gone on to be considered one of the best science fiction novels of all time. And though none of his other books ever won the Hugo or Nebula awards, almost all of them went on to be New York Times Best Sellers. Frank Herbert was inducted into the Science Fiction Hall of Fame in 2006.</p>
+    </section>
+    <footer id="contact" class="footer">
+      <h4>Page Author: Derek Grubbs</h4>
+      <form action="">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <label for="message">Your Message:</label>
+        <input type="text" id="message" name="message">
+      </form>
+    </footer>
+  </body>
+</html>
